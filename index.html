@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimal Music Player</title>
+
+    <!-- Font Awesome (no integrity to avoid SRI/version mismatches) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <!-- in <head> -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🎵</text></svg>"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="player">
+      <div class="cover-wrap">
+        <img
+          id="cover"
+          src="assets/images/alien-6782778.jpg"
+          alt="Album cover"
+        />
+      </div>
+
+      <div class="track-info">
+        <h1 id="title">Track Title</h1>
+        <p id="artist">Artist</p>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="time">
+          <span id="current">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+        <input
+          id="progress"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          step="0.1"
+        />
+      </div>
+
+      <div class="controls">
+        <button id="prev" class="icon-btn" aria-label="Previous">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+
+        <button id="play" class="play-btn" aria-label="Play/Pause">
+          <i class="fa-solid fa-play"></i>
+        </button>
+
+        <button id="next" class="icon-btn" aria-label="Next">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+      </div>
+
+      <div class="bottom-bar">
+        <div class="volume">
+          <button id="mute" class="icon-btn" aria-label="Mute/Unmute">
+            <i id="volIcon" class="fa-solid fa-volume-high"></i>
+          </button>
+          <input
+            id="volume"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+          />
+        </div>
+
+        <button id="repeat" class="icon-btn" aria-label="Repeat">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+      </div>
+    </main>
+
+    <audio id="audio" preload="metadata"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
