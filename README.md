@@ -7,7 +7,7 @@ It features play/pause, next/previous, repeat, progress bar, and volume controls
 
 👉 Live Demo Link
 
-(Replace with your GitHub Pages or hosting link once deployed)
+https://abdkay.github.io/Minimal-Music-Player/
 
 📸 Screenshots
 ![App Screenshot](assets/screenshots/Screenshot%202025-08-24%20141818.png)
